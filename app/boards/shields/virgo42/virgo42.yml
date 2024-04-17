@@ -1,0 +1,8 @@
+file_format: "1"
+id: virgo42zmk
+name: virgo42zmk
+type: shield
+url: 
+requires: [nrfmicro_13_52840]
+features:
+  - keys
