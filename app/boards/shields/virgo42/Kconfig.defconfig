@@ -4,6 +4,6 @@
 if SHIELD_VIRGO42
 
 config ZMK_KEYBOARD_NAME
-	default "virgo42_zmk"
+	default "virgo42"
 
 endif
