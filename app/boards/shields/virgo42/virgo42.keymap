@@ -1,0 +1,48 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+/ {
+	keymap0: keymap {
+		compatible = "zmk,keymap";
+
+		default_layer {
+// -------------------------------------------------------------------------
+// | ESC  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U  |  I  |  O  |  P  |BKSP|
+// | CAPS  |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  ENTER  | 
+// |  SHIFT   |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  / |  UP  |  fn  |
+// |  CTL | WIN |  ALT  |    SPACE    |       SPACE   | LEFT | DOWN | RIGHT|  
+// -------------------------------------------------------------------------
+			bindings = <
+    &kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC 
+	&kp CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L    &kp RET       
+	&kp LSHFT   &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp FSLH  &kp UP  &mo 1   
+	&kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE      &kp SPACE     &kp LEFT  &kp DOWN  &kp RIGHT  
+			>;
+		};
+
+		fn_layer {
+// -------------------------------------------------------------------------
+// | ~  |  1   |  2  |  3  |  R  |  T  |  Y  |  U  |  I  |  -  |  =  |BKSP |
+// | TAB  |  4  |  5  |  6   |  F  |  G  |  [  |  ]  |  ;  |  '  |    "|"  |
+// |  SHIFT   |  7  |  8  |  9  |  V  |  B  |  N  |   ,  |  .  |  UP |  fn |
+// |  BT_CLR  | BOOT |  ALT  |     0    |       SPACE    | BT0 | BT1 | BT2 |
+// -------------------------------------------------------------------------
+			bindings = <
+    &kp GRAVE   &kp N1   &kp N2   &kp N3   &trans   &trans   &trans   &trans   &trans   &kp MINUS   &kp EQUAL   &kp DEL
+	&kp TAB      &kp N4   &kp N5   &kp N6   &trans   &trans   &kp LBKT   &kp RBKT   &kp SEMI   &kp SQT   &kp BSLH
+	&kp LSHFT       &kp N7   &kp N8   &kp N9   &trans   &trans   &trans   &kp COMMA   &kp DOT   &trans     &trans
+	&bt BT_CLR   &bootloader   &kp LALT        &kp N0          &trans         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2
+			>;	
+		};
+	};
+};
