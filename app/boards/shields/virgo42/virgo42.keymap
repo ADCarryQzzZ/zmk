@@ -41,7 +41,7 @@
     &kp GRAVE   &kp N1   &kp N2   &kp N3   &trans   &trans   &trans   &trans   &trans   &kp MINUS   &kp EQUAL   &kp DEL
 	&kp TAB      &kp N4   &kp N5   &kp N6   &trans   &trans   &kp LBKT   &kp RBKT   &kp SEMI   &kp SQT   &kp BSLH
 	&kp LSHFT       &kp N7   &kp N8   &kp N9   &trans   &trans   &trans   &kp COMMA   &kp DOT   &trans     &trans
-	&bt BT_CLR   &bootloader   &kp LALT        &kp N0          &trans         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2
+	&bt BT_CLR   &bootloader   &kp F24        &kp N0          &kp F8         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2
 			>;	
 		};
 	};
